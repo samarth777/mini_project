@@ -1,10 +1,10 @@
+import sys
 from flask import Flask, request, jsonify
 from twilio.twiml.messaging_response import MessagingResponse
 from twilio.rest import Client
-import sys
 
-account_sid = 'AC69256113c197b8df214261681e642e5c' 
-auth_token = 'ff2fb5f1dc1aeae70f13b90a68ea2a5c' 
+account_sid = 'ACC_SID' 
+auth_token = 'AUTH_TOKEN' 
 client = Client(account_sid, auth_token) 
 
 app = Flask(__name__)
@@ -30,5 +30,6 @@ def pybot():
                           ) 
     
     return 'None'
+
 if __name__ == '__main__':
     app.run(debug=True)
